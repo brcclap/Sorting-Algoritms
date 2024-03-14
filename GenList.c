@@ -4,8 +4,8 @@
 
 int generateRandomNumber()
 {
-    // elemente de la 0-4999
-    return rand() % 5000;
+    // elemente de la 0-5
+    return rand() % 6;
 }
 
 int *createRandomList(int size)
@@ -55,7 +55,7 @@ int main()
     srand(time(NULL));
 
     // nr elemente
-    int size = 100000;
+    int size = 10000000;
 
     int *randomList = createRandomList(size);
 

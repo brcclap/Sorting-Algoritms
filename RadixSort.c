@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_SIZE 100
+#define MAX_SIZE 10000001
 
 int readFromFileToArray(const char *filename, int array[])
 {
@@ -53,7 +53,7 @@ int getMax(int arr[], int n)
 
 void countSort(int arr[], int n, int exp)
 {
-    int output[n];
+    int *output = (int *)malloc(MAX_SIZE * sizeof(int));
     int count[10] = {0};
 
     for (int i = 0; i < n; i++)
@@ -91,7 +91,7 @@ int main()
 {
     clock_t start_time, end_time;
     double cpu_time_used;
-    int array[MAX_SIZE];
+    int *array = (int *)malloc(MAX_SIZE * sizeof(int));
     int num_elements;
     start_time = clock();
 

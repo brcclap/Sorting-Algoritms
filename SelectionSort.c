@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_SIZE 100
-
+#define MAX_SIZE 100001
 void selectionSort(int arr[], int n)
 {
     int i, j, minIndex, temp;
@@ -63,7 +62,7 @@ int main()
 {
     clock_t start_time, end_time;
     double cpu_time_used;
-    int array[MAX_SIZE];
+    int *array = (int *)malloc(MAX_SIZE * sizeof(int));
     int num_elements;
     start_time = clock();
 
